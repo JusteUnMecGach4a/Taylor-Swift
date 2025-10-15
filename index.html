@@ -46,6 +46,17 @@
             max-height: 500px; /* Valeur suffisamment grande pour contenir la liste */
             padding-top: 1rem;
         }
+        
+        /* Styles pour le menu mobile (caché par défaut) */
+        .mobile-menu-container {
+            transition: max-height 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .mobile-menu-container.open {
+            max-height: 500px; /* Valeur suffisante pour afficher tout le contenu */
+        }
+        
 
     </style>
 </head>
@@ -53,24 +64,37 @@
 
     <!-- Barre de Navigation (Header) -->
     <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-sm shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <!-- Logo/Nom -->
-            <a href="#" class="text-2xl font-bold tracking-widest text-primary hover:text-secondary transition duration-300">
-                T.S. FAN
-            </a>
-            <!-- Menu de Navigation (MISE À JOUR) -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="#bio" class="text-base font-medium text-slate-300 hover:text-secondary transition duration-150">Biographie</a>
-                <a href="#awards" class="text-base font-medium text-slate-300 hover:text-secondary transition duration-150">Récompenses</a>
-                <a href="#discographie" class="text-base font-medium text-slate-300 hover:text-secondary transition duration-150">Discographie</a>
-                <a href="#news" class="text-base font-medium text-slate-300 hover:text-secondary transition duration-150">Actualités</a>
-            </nav>
-            <!-- Bouton Menu Mobile (Non fonctionnel mais requis pour l'UI) -->
-            <button class="md:hidden p-2 rounded-md hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-primary">
-                <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Nom -->
+                <a href="#" class="text-2xl font-bold tracking-widest text-primary hover:text-secondary transition duration-300">
+                    T.S. FAN
+                </a>
+                <!-- Menu de Navigation Desktop -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#bio" class="text-base font-medium text-slate-300 hover:text-secondary transition duration-150">Biographie</a>
+                    <a href="#awards" class="text-base font-medium text-slate-300 hover:text-secondary transition duration-150">Récompenses</a>
+                    <a href="#discographie" class="text-base font-medium text-slate-300 hover:text-secondary transition duration-150">Discographie</a>
+                    <a href="#news" class="text-base font-medium text-slate-300 hover:text-secondary transition duration-150">Actualités</a>
+                </nav>
+                <!-- Bouton Menu Mobile (Fonctionnel) -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Toggle menu">
+                    <!-- Icone Hamburger -->
+                    <svg id="menu-icon" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Mobile Déroulant (Ajouté pour la réactivité) -->
+            <div id="mobile-menu-container" class="mobile-menu-container md:hidden">
+                <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
+                    <a href="#bio" onclick="toggleMobileMenu()" class="text-slate-200 hover:bg-slate-700 hover:text-secondary block px-3 py-2 rounded-md text-base font-medium w-full">Biographie</a>
+                    <a href="#awards" onclick="toggleMobileMenu()" class="text-slate-200 hover:bg-slate-700 hover:text-secondary block px-3 py-2 rounded-md text-base font-medium w-full">Récompenses</a>
+                    <a href="#discographie" onclick="toggleMobileMenu()" class="text-slate-200 hover:bg-slate-700 hover:text-secondary block px-3 py-2 rounded-md text-base font-medium w-full">Discographie</a>
+                    <a href="#news" onclick="toggleMobileMenu()" class="text-slate-200 hover:bg-slate-700 hover:text-secondary block px-3 py-2 rounded-md text-base font-medium w-full">Actualités</a>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -406,7 +430,7 @@
         </div>
     </footer>
     
-    <!-- Script JavaScript pour le Toggle de la Tracklist -->
+    <!-- Script JavaScript pour le Toggle de la Tracklist et le Menu Mobile -->
     <script>
         /**
          * Bascule la visibilité de la liste des titres avec une transition CSS.
@@ -429,6 +453,27 @@
                 }
             }
         }
+        
+        /**
+         * Bascule la visibilité du menu de navigation mobile.
+         */
+        function toggleMobileMenu() {
+            const menuContainer = document.getElementById('mobile-menu-container');
+            const menuIcon = document.getElementById('menu-icon');
+            
+            if (menuContainer.classList.contains('open')) {
+                // Fermer le menu
+                menuContainer.classList.remove('open');
+                // Changer l'icône en hamburger
+                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />';
+            } else {
+                // Ouvrir le menu
+                menuContainer.classList.add('open');
+                // Changer l'icône en croix (X)
+                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+            }
+        }
+
     </script>
 
 </body>
