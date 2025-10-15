@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor Swift - L'ère Éternelle</title>
+    <!-- Chargement de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuration de la police Inter et d'un schéma de couleurs personnalisé -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --color-primary: #8b5cf6; /* Violet (Lavande) */
+            --color-secondary: #fcd34d; /* Jaune/Or */
+            --color-background: #0f172a; /* Bleu Nuit */
+            --color-text: #f8fafc; /* Blanc cassé */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de Navigation (Header) -->
+    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/Nom -->
+            <a href="#" class="text-2xl font-bold tracking-widest text-primary hover:text-secondary transition duration-300">
+                T.S. FAN
+            </a>
+            <!-- Menu de Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#bio" class="text-base font-medium text-slate-300 hover:text-secondary transition duration-150">Biographie</a>
+                <a href="#discographie" class="text-base font-medium text-slate-300 hover:text-secondary transition duration-150">Discographie</a>
+                <a href="#news" class="text-base font-medium text-slate-300 hover:text-secondary transition duration-150">Actualités</a>
+            </nav>
+            <!-- Bouton Menu Mobile (Non fonctionnel mais requis pour l'UI) -->
+            <button class="md:hidden p-2 rounded-md hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-primary">
+                <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section Héro / Bannière -->
+        <section class="relative h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+            <!-- Placeholder d'image de fond (avec fallback) -->
+            <img 
+                src="https://placehold.co/1600x900/1e293b/a5b4fc?text=Taylor+Swift+-+The+Eras" 
+                onerror="this.onerror=null;this.src='https://placehold.co/1600x900/1e293b/a5b4fc?text=Taylor+Swift'"
+                alt="Bannière Taylor Swift" 
+                class="absolute inset-0 w-full h-full object-cover opacity-30"
+            />
+            <!-- Contenu du Héro -->
+            <div class="relative z-10 text-center p-6 bg-black/40 rounded-xl max-w-4xl mx-auto m-4">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4">
+                    Bienvenue dans <span class="text-secondary block">L'ère Éternelle</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-200">
+                    Célébrer la musique et l'héritage de Taylor Swift.
+                </p>
+                <a href="#discographie" class="mt-8 inline-block px-8 py-3 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-purple-700 transition duration-300 transform hover:scale-105">
+                    Découvrir sa Musique
+                </a>
+            </div>
+        </section>
+
+        <!-- Section Biographie -->
+        <section id="bio" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-primary">Biographie</h2>
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <!-- Image latérale -->
+                <div class="md:w-1/3">
+                    <img 
+                        src="https://placehold.co/400x400/8b5cf6/fcd34d?text=Portrait+TS" 
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x400/8b5cf6/fcd34d?text=Taylor+Swift'"
+                        alt="Taylor Swift" 
+                        class="w-full h-auto object-cover rounded-3xl shadow-2xl border-4 border-primary/50 transition duration-500 hover:scale-[1.02]"
+                    />
+                </div>
+                <!-- Texte de la biographie -->
+                <div class="md:w-2/3 space-y-6 text-lg text-slate-300">
+                    <p>
+                        Née en Pennsylvanie, Taylor Alison Swift a commencé sa carrière en tant qu'auteure-compositrice-interprète de musique country. Rapidement, elle a transcendé les genres, devenant l'une des artistes les plus influentes et acclamées de sa génération. Son talent pour la narration, souvent inspiré par sa vie personnelle, résonne profondément avec des millions de fans à travers le monde.
+                    </p>
+                    <p>
+                        Chacune de ses "Eras" (époques) — de la country de *Fearless* à la pop synthétique de *1989*, en passant par l'indie-folk de *Folklore* — démontre une évolution artistique constante. Elle est également une ardente défenseure des droits des artistes et de la propriété de son œuvre, une lutte qui a donné naissance à ses réenregistrements "Taylor's Version".
+                    </p>
+                    <p>
+                        Ses récompenses incluent de multiples Grammys (y compris un record de quatre albums de l'année) et elle continue de battre des records d'audience, de ventes et de tournées, consolidant son statut de légende de la musique contemporaine.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Discographie -->
+        <section id="discographie" class="bg-slate-800 py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-secondary">Discographie (Sélection)</h2>
+                
+                <!-- Grille d'Albums -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Album 1: Midnights -->
+                    <article class="bg-slate-700 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition duration-500 transform hover:scale-[1.03]">
+                        <img 
+                            src="https://placehold.co/400x400/273a56/ffffff?text=Midnights" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/273a56/ffffff?text=Midnights'"
+                            alt="Pochette de l'album Midnights" 
+                            class="w-full h-auto object-cover rounded-xl mb-4"
+                        />
+                        <h3 class="text-2xl font-semibold text-white mb-2">Midnights (2022)</h3>
+                        <p class="text-primary font-medium mb-3">Pop, Synth-Pop</p>
+                        <p class="text-slate-400 text-sm">Une collection de chansons écrites au milieu de la nuit, un voyage à travers la terreur et les rêves doux.</p>
+                        <a href="#" class="mt-4 inline-block text-sm text-secondary hover:underline">Voir les titres</a>
+                    </article>
+
+                    <!-- Album 2: folklore -->
+                    <article class="bg-slate-700 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition duration-500 transform hover:scale-[1.03]">
+                        <img 
+                            src="https://placehold.co/400x400/7d7d7d/ffffff?text=folklore" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/7d7d7d/ffffff?text=folklore'"
+                            alt="Pochette de l'album folklore" 
+                            class="w-full h-auto object-cover rounded-xl mb-4"
+                        />
+                        <h3 class="text-2xl font-semibold text-white mb-2">folklore (2020)</h3>
+                        <p class="text-primary font-medium mb-3">Indie Folk, Alternative</p>
+                        <p class="text-slate-400 text-sm">Un album surprise infusé de récits et d'une ambiance intime, créé pendant le confinement.</p>
+                        <a href="#" class="mt-4 inline-block text-sm text-secondary hover:underline">Voir les titres</a>
+                    </article>
+
+                    <!-- Album 3: 1989 (Taylor's Version) -->
+                    <article class="bg-slate-700 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition duration-500 transform hover:scale-[1.03]">
+                        <img 
+                            src="https://placehold.co/400x400/1e293b/ffffff?text=1989+TV" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/1e293b/ffffff?text=1989+TV'"
+                            alt="Pochette de l'album 1989 (Taylor's Version)" 
+                            class="w-full h-auto object-cover rounded-xl mb-4"
+                        />
+                        <h3 class="text-2xl font-semibold text-white mb-2">1989 (TV) (2023)</h3>
+                        <p class="text-primary font-medium mb-3">Pop, New Wave</p>
+                        <p class="text-slate-400 text-sm">Le réenregistrement de son album emblématique de 2014, marquant officiellement son passage à la pop.</p>
+                        <a href="#" class="mt-4 inline-block text-sm text-secondary hover:underline">Voir les titres</a>
+                    </article>
+
+                    <!-- Album 4: Red (Taylor's Version) -->
+                    <article class="bg-slate-700 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition duration-500 transform hover:scale-[1.03]">
+                        <img 
+                            src="https://placehold.co/400x400/b91c1c/ffffff?text=Red+TV" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/b91c1c/ffffff?text=Red+TV'"
+                            alt="Pochette de l'album Red (Taylor's Version)" 
+                            class="w-full h-auto object-cover rounded-xl mb-4"
+                        />
+                        <h3 class="text-2xl font-semibold text-white mb-2">Red (TV) (2021)</h3>
+                        <p class="text-primary font-medium mb-3">Country Pop, Rock</p>
+                        <p class="text-slate-400 text-sm">Un chef-d'œuvre émotionnel comprenant la version intégrale de 10 minutes de "All Too Well".</p>
+                        <a href="#" class="mt-4 inline-block text-sm text-secondary hover:underline">Voir les titres</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Actualités (News) -->
+        <section id="news" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-primary">Actualités & Tournée</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Carte d'Actualité 1 -->
+                <div class="bg-slate-900 p-6 rounded-2xl shadow-xl border border-primary/20">
+                    <h3 class="text-xl font-semibold mb-3 text-secondary">Le Film The Eras Tour</h3>
+                    <p class="text-slate-400 mb-4 text-sm">
+                        Le film du concert est désormais disponible en streaming, permettant aux fans de revivre la magie de la tournée mondiale.
+                    </p>
+                    <a href="#" class="text-primary hover:text-secondary text-sm font-medium">Lire la suite &rarr;</a>
+                </div>
+
+                <!-- Carte d'Actualité 2 -->
+                <div class="bg-slate-900 p-6 rounded-2xl shadow-xl border border-primary/20">
+                    <h3 class="text-xl font-semibold mb-3 text-secondary">Nouvel Album "From The Vault"</h3>
+                    <p class="text-slate-400 mb-4 text-sm">
+                        Des rumeurs circulent sur un prochain album réenregistré qui pourrait inclure un nombre record de chansons "From The Vault" inédites.
+                    </p>
+                    <a href="#" class="text-primary hover:text-secondary text-sm font-medium">En savoir plus &rarr;</a>
+                </div>
+
+                <!-- Carte d'Actualité 3 -->
+                <div class="bg-slate-900 p-6 rounded-2xl shadow-xl border border-primary/20">
+                    <h3 class="text-xl font-semibold mb-3 text-secondary">Les Dates de la Tournée Européenne</h3>
+                    <p class="text-slate-400 mb-4 text-sm">
+                        La prochaine étape de la tournée The Eras Tour se concentrera sur les stades européens. Vérifiez les dates de Paris et de Lyon.
+                    </p>
+                    <a href="#" class="text-primary hover:text-secondary text-sm font-medium">Voir le calendrier &rarr;</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action Footer -->
+        <section class="bg-primary/20 py-12 text-center">
+            <h3 class="text-3xl font-bold text-primary mb-4">Rejoignez la Communauté Swiftie !</h3>
+            <p class="text-slate-200 mb-6">Ne manquez aucune annonce de l'artiste.</p>
+            <a href="#" class="inline-block px-10 py-3 bg-secondary text-slate-900 font-bold rounded-full shadow-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105">
+                S'abonner aux Newsletters
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-primary/20 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400">
+            <p>&copy; 2024 Fan Site Non Officiel | Créé par un Swiftie passionné.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-primary transition duration-150">Politique de Confidentialité</a>
+                <span class="text-slate-500">|</span>
+                <a href="#" class="hover:text-primary transition duration-150">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
