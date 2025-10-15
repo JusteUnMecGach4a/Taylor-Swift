@@ -33,6 +33,17 @@
         .bg-primary { background-color: var(--color-primary); }
         .text-secondary { color: var(--color-secondary); }
         .hover\:bg-primary-dark:hover { background-color: var(--color-primary-dark); }
+        
+        /* Classe pour la transition d'ouverture/fermeture */
+        .tracklist {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        }
+        .tracklist.open {
+            max-height: 500px; /* Valeur suffisamment grande pour contenir la liste */
+            padding-top: 1rem;
+        }
 
     </style>
 </head>
@@ -137,7 +148,22 @@
                         <h3 class="text-2xl font-semibold text-white mb-2">Midnights (2022)</h3>
                         <p class="text-primary font-medium mb-3">Pop, Synth-Pop</p>
                         <p class="text-slate-400 text-sm">Une collection de chansons écrites au milieu de la nuit, un voyage à travers la terreur et les rêves doux.</p>
-                        <a href="#" class="mt-4 inline-block text-sm text-secondary hover:underline">Voir les titres</a>
+                        <!-- Bouton cliquable pour afficher les titres -->
+                        <button onclick="toggleTracklist('midnights-tracks')" class="mt-4 inline-block text-sm text-secondary hover:underline font-bold focus:outline-none">
+                            Voir/Cacher les titres
+                        </button>
+                        <!-- Liste des titres (cachée par défaut) -->
+                        <div id="midnights-tracks" class="tracklist border-t border-slate-600 mt-4">
+                            <ul class="list-disc list-inside space-y-1 text-sm text-slate-300">
+                                <li>Lavender Haze</li>
+                                <li>Maroon</li>
+                                <li>Anti-Hero</li>
+                                <li>Snow on the Beach</li>
+                                <li>Karma</li>
+                                <li>Bejeweled</li>
+                                <li>... et 13 autres</li>
+                            </ul>
+                        </div>
                     </article>
 
                     <!-- Album 2: folklore -->
@@ -151,7 +177,22 @@
                         <h3 class="text-2xl font-semibold text-white mb-2">folklore (2020)</h3>
                         <p class="text-primary font-medium mb-3">Indie Folk, Alternative</p>
                         <p class="text-slate-400 text-sm">Un album surprise infusé de récits et d'une ambiance intime, créé pendant le confinement.</p>
-                        <a href="#" class="mt-4 inline-block text-sm text-secondary hover:underline">Voir les titres</a>
+                        <!-- Bouton cliquable pour afficher les titres -->
+                        <button onclick="toggleTracklist('folklore-tracks')" class="mt-4 inline-block text-sm text-secondary hover:underline font-bold focus:outline-none">
+                            Voir/Cacher les titres
+                        </button>
+                        <!-- Liste des titres (cachée par défaut) -->
+                        <div id="folklore-tracks" class="tracklist border-t border-slate-600 mt-4">
+                            <ul class="list-disc list-inside space-y-1 text-sm text-slate-300">
+                                <li>The 1</li>
+                                <li>Cardigan</li>
+                                <li>The Last Great American Dynasty</li>
+                                <li>Exile (feat. Bon Iver)</li>
+                                <li>My Tears Ricochet</li>
+                                <li>Betty</li>
+                                <li>... et 10 autres</li>
+                            </ul>
+                        </div>
                     </article>
 
                     <!-- Album 3: 1989 (Taylor's Version) -->
@@ -165,7 +206,22 @@
                         <h3 class="text-2xl font-semibold text-white mb-2">1989 (TV) (2023)</h3>
                         <p class="text-primary font-medium mb-3">Pop, New Wave</p>
                         <p class="text-slate-400 text-sm">Le réenregistrement de son album emblématique de 2014, marquant officiellement son passage à la pop.</p>
-                        <a href="#" class="mt-4 inline-block text-sm text-secondary hover:underline">Voir les titres</a>
+                        <!-- Bouton cliquable pour afficher les titres -->
+                        <button onclick="toggleTracklist('1989tv-tracks')" class="mt-4 inline-block text-sm text-secondary hover:underline font-bold focus:outline-none">
+                            Voir/Cacher les titres
+                        </button>
+                        <!-- Liste des titres (cachée par défaut) -->
+                        <div id="1989tv-tracks" class="tracklist border-t border-slate-600 mt-4">
+                            <ul class="list-disc list-inside space-y-1 text-sm text-slate-300">
+                                <li>Welcome To New York</li>
+                                <li>Blank Space</li>
+                                <li>Style</li>
+                                <li>Shake It Off</li>
+                                <li>Wildest Dreams</li>
+                                <li>New Romantics</li>
+                                <li>... et 16 autres</li>
+                            </ul>
+                        </div>
                     </article>
 
                     <!-- Album 4: Red (Taylor's Version) -->
@@ -179,7 +235,22 @@
                         <h3 class="text-2xl font-semibold text-white mb-2">Red (TV) (2021)</h3>
                         <p class="text-primary font-medium mb-3">Country Pop, Rock</p>
                         <p class="text-slate-400 text-sm">Un chef-d'œuvre émotionnel comprenant la version intégrale de 10 minutes de "All Too Well".</p>
-                        <a href="#" class="mt-4 inline-block text-sm text-secondary hover:underline">Voir les titres</a>
+                        <!-- Bouton cliquable pour afficher les titres -->
+                        <button onclick="toggleTracklist('redtv-tracks')" class="mt-4 inline-block text-sm text-secondary hover:underline font-bold focus:outline-none">
+                            Voir/Cacher les titres
+                        </button>
+                        <!-- Liste des titres (cachée par défaut) -->
+                        <div id="redtv-tracks" class="tracklist border-t border-slate-600 mt-4">
+                            <ul class="list-disc list-inside space-y-1 text-sm text-slate-300">
+                                <li>State of Grace</li>
+                                <li>Red</li>
+                                <li>Treacherous</li>
+                                <li>I Knew You Were Trouble.</li>
+                                <li>22</li>
+                                <li>All Too Well (10 Minute Version)</li>
+                                <li>... et 24 autres</li>
+                            </ul>
+                        </div>
                     </article>
 
                 </div>
@@ -242,6 +313,20 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Script JavaScript pour le Toggle de la Tracklist -->
+    <script>
+        /**
+         * Bascule la visibilité de la liste des titres avec une transition CSS.
+         * @param {string} id - L'ID de l'élément div contenant la liste des titres.
+         */
+        function toggleTracklist(id) {
+            const tracklist = document.getElementById(id);
+            if (tracklist) {
+                tracklist.classList.toggle('open');
+            }
+        }
+    </script>
 
 </body>
 </html>
