@@ -87,7 +87,7 @@
                     Bienvenue dans <span class="text-secondary block">L'ère Éternelle</span>
                 </h1>
                 <p class="text-lg sm:text-xl text-slate-200">
-                    Célébrer la musique et l'héritage de Taylor Swift.
+                    Célébrer la musique, les records et l'héritage d'une artiste unique en son genre.
                 </p>
                 <a href="#discographie" class="mt-8 inline-block px-8 py-3 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-primary-dark transition duration-300 transform hover:scale-105">
                     Découvrir sa Musique
@@ -97,7 +97,7 @@
 
         <!-- Section Biographie -->
         <section id="bio" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-primary">Biographie</h2>
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-primary">Biographie Détaillée</h2>
             <div class="flex flex-col md:flex-row gap-10 items-center">
                 <!-- Image latérale -->
                 <div class="md:w-1/3">
@@ -111,13 +111,13 @@
                 <!-- Texte de la biographie -->
                 <div class="md:w-2/3 space-y-6 text-lg text-slate-300">
                     <p>
-                        Née en Pennsylvanie, Taylor Alison Swift a commencé sa carrière en tant qu'auteure-compositrice-interprète de musique country. Rapidement, elle a transcendé les genres, devenant l'une des artistes les plus influentes et acclamées de sa génération. Son talent pour la narration, souvent inspiré par sa vie personnelle, résonne profondément avec des millions de fans à travers le monde.
+                        Née en Pennsylvanie, Taylor Alison Swift a commencé sa carrière en tant qu'auteure-compositrice-interprète de musique country. À l'âge de 14 ans, elle a signé avec la maison de disques Big Machine Records et est devenue l'artiste la plus jeune à signer avec Sony/ATV Music Publishing. Son premier album éponyme a été un succès retentissant en 2006.
                     </p>
                     <p>
-                        Chacune de ses "Eras" (époques) — de la country de *Fearless* à la pop synthétique de *1989*, en passant par l'indie-folk de *Folklore* — démontre une évolution artistique constante. Elle est également une ardente défenseure des droits des artistes et de la propriété de son œuvre, une lutte qui a donné naissance à ses réenregistrements "Taylor's Version".
+                        Rapidement, elle a transcendé les genres, devenant l'une des artistes les plus influentes et acclamées de sa génération. Son talent pour la narration, souvent inspiré par sa vie personnelle et ses observations sociales, résonne profondément avec des millions de fans à travers le monde. Chaque album est considéré comme une 'Ère' unique, marquant une transition stylistique et thématique.
                     </p>
                     <p>
-                        Ses récompenses incluent de multiples Grammys (y compris un record de quatre albums de l'année) et elle continue de battre des records d'audience, de ventes et de tournées, consolidant son statut de légende de la musique contemporaine.
+                        Elle est également une ardente défenseure des droits des artistes et de la propriété de son œuvre, une lutte qui a donné naissance à ses projets de réenregistrement "Taylor's Version". Cette démarche lui a permis de reprendre le contrôle créatif et économique de ses six premiers albums. Ses récompenses incluent un nombre record de quatre albums de l'année aux Grammy Awards, la plaçant au sommet de l'histoire de la musique.
                     </p>
                     <!-- Lien Wikipedia -->
                     <p class="mt-8 pt-4 border-t border-slate-700 text-base">
@@ -132,10 +132,10 @@
         <!-- Section Discographie -->
         <section id="discographie" class="bg-slate-800 py-16 md:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-secondary">Discographie (Sélection)</h2>
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-secondary">Discographie (Sélection Complète)</h2>
                 
-                <!-- Grille d'Albums -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Grille d'Albums : 5 éléments, la 5ème passe à la ligne sur desktop -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
                     
                     <!-- Album 1: Midnights -->
                     <article class="bg-slate-700 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition duration-500 transform hover:scale-[1.03]">
@@ -274,6 +274,36 @@
                         </div>
                     </article>
 
+                    <!-- NOUVEL ALBUM: Reputation -->
+                    <article class="bg-slate-700 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition duration-500 transform hover:scale-[1.03]">
+                        <img 
+                            src="https://placehold.co/400x400/000000/FFFFFF?text=Reputation" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/000000/FFFFFF?text=Reputation';"
+                            alt="Pochette de l'album Reputation" 
+                            class="w-full h-auto object-cover rounded-3xl mb-4 border-2 border-slate-500"
+                        />
+                        <h3 class="text-2xl font-semibold text-white mb-2">Reputation (2017)</h3>
+                        <p class="text-primary font-medium mb-3">Pop, Electro-Pop</p>
+                        <p class="text-slate-400 text-sm">L'album de la réinvention, explorant les thèmes de la célébrité, de l'amour et de la vengeance avec une production sombre et puissante.</p>
+                        <!-- Bouton cliquable pour afficher les titres -->
+                        <button onclick="toggleTracklist('reputation-tracks')" class="mt-4 inline-block text-sm text-secondary hover:underline font-bold focus:outline-none">
+                            Voir/Cacher les titres
+                        </button>
+                        <!-- Liste des titres (cachée par défaut) -->
+                        <div id="reputation-tracks" class="tracklist border-t border-slate-600 mt-4">
+                            <ul class="list-disc list-inside space-y-1 text-sm text-slate-300">
+                                <li>...Ready for It?</li>
+                                <li>End Game (feat. Ed Sheeran & Future)</li>
+                                <li>Delicate</li>
+                                <li>Look What You Made Me Do</li>
+                                <li>Don't Blame Me</li>
+                                <li>Getaway Car</li>
+                                <li>Call It What You Want</li>
+                                <li>New Year's Day</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
                 </div>
             </div>
         </section>
@@ -282,7 +312,8 @@
         <section id="news" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-primary">Actualités & Tournée</h2>
             
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Grille d'Actualités (4 éléments) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Carte d'Actualité 1 -->
                 <div class="bg-slate-900 p-6 rounded-2xl shadow-xl border border-[var(--color-primary)]/20">
                     <h3 class="text-xl font-semibold mb-3 text-secondary">Le Film The Eras Tour</h3>
@@ -309,16 +340,39 @@
                     </p>
                     <a href="https://www.google.com/search?q=Taylor+Swift+The+Eras+Tour+Europe+Dates" target="_blank" class="text-primary hover:text-secondary text-sm font-medium">Voir le calendrier &rarr;</a>
                 </div>
+
+                <!-- Carte d'Actualité 4 (Nouveau) -->
+                <div class="bg-slate-900 p-6 rounded-2xl shadow-xl border border-[var(--color-primary)]/20">
+                    <h3 class="text-xl font-semibold mb-3 text-secondary">Impact Économique Mondial</h3>
+                    <p class="text-slate-400 mb-4 text-sm">
+                        L'Eras Tour génère des milliards de dollars, boostant les économies locales partout où la chanteuse se produit.
+                    </p>
+                    <a href="https://www.google.com/search?q=Taylor+Swift+Economic+Impact+Eras+Tour" target="_blank" class="text-primary hover:text-secondary text-sm font-medium">Analyse complète &rarr;</a>
+                </div>
             </div>
         </section>
         
-        <!-- Call to Action Footer -->
+        <!-- Call to Action Footer (Amélioré) -->
         <section class="bg-[var(--color-primary)]/20 py-12 text-center">
             <h3 class="text-3xl font-bold text-primary mb-4">Rejoignez la Communauté Swiftie !</h3>
-            <p class="text-slate-200 mb-6">Ne manquez aucune annonce de l'artiste.</p>
-            <a href="#" class="inline-block px-10 py-3 bg-secondary text-slate-900 font-bold rounded-full shadow-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105">
-                S'abonner aux Newsletters
-            </a>
+            <p class="text-slate-200 mb-6">Recevez les dernières infos, exclusivités et mises à jour sur Taylor Swift directement par email.</p>
+            
+            <!-- Formulaire d'Abonnement (simulé) -->
+            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-2 px-4 sm:px-0" onsubmit="alert('Merci pour votre inscription ! (Simulé)'); return false;">
+                <input 
+                    type="email" 
+                    placeholder="Entrez votre email de Swiftie..." 
+                    required 
+                    class="w-full px-5 py-3 rounded-full text-slate-900 focus:outline-none focus:ring-2 focus:ring-secondary border-none shadow-md"
+                >
+                <button 
+                    type="submit" 
+                    class="px-6 py-3 bg-secondary text-slate-900 font-bold rounded-full shadow-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-[1.02] sm:w-auto w-full"
+                >
+                    S'abonner
+                </button>
+            </form>
+
         </section>
 
     </main>
@@ -346,7 +400,18 @@
         function toggleTracklist(id) {
             const tracklist = document.getElementById(id);
             if (tracklist) {
+                // Bascule la classe 'open' pour déclencher la transition CSS
                 tracklist.classList.toggle('open');
+                
+                // Si la liste est ouverte, faire défiler vers elle (expérience utilisateur améliorée)
+                if (tracklist.classList.contains('open')) {
+                    const albumArticle = tracklist.closest('article');
+                    if (albumArticle) {
+                        setTimeout(() => {
+                            albumArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 500); // Attendre la fin de la transition d'ouverture
+                    }
+                }
             }
         }
     </script>
