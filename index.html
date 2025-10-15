@@ -73,8 +73,8 @@
     </header>
 
     <main>
-        <!-- Section Héro / Bannière -->
-        <section class="relative h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+        <!-- Section Héro / Bannière (Ajustement pour mobile) -->
+        <section class="relative h-[50vh] sm:h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
             <!-- Placeholder d'image de fond (avec fallback) -->
             <img 
                 src="https://placehold.co/1600x900/1e293b/a5b4fc?text=Taylor+Swift+-+The+Eras" 
@@ -83,14 +83,14 @@
                 class="absolute inset-0 w-full h-full object-cover opacity-30"
             />
             <!-- Contenu du Héro -->
-            <div class="relative z-10 text-center p-6 bg-black/40 rounded-xl max-w-4xl mx-auto m-4">
-                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4">
+            <div class="relative z-10 text-center p-4 sm:p-6 bg-black/40 rounded-xl max-w-4xl mx-auto m-4">
+                <h1 class="text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-3 sm:mb-4">
                     Bienvenue dans <span class="text-secondary block">L'ère Éternelle</span>
                 </h1>
-                <p class="text-lg sm:text-xl text-slate-200">
+                <p class="text-sm sm:text-lg text-slate-200">
                     Célébrer la musique, les records et l'héritage d'une artiste unique en son genre.
                 </p>
-                <a href="#discographie" class="mt-8 inline-block px-8 py-3 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-primary-dark transition duration-300 transform hover:scale-105">
+                <a href="#discographie" class="mt-6 sm:mt-8 inline-block px-6 sm:px-8 py-2 sm:py-3 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-primary-dark transition duration-300 transform hover:scale-105 text-sm sm:text-base">
                     Découvrir sa Musique
                 </a>
             </div>
@@ -100,7 +100,7 @@
         <section id="bio" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-primary">Biographie Détaillée</h2>
             <div class="flex flex-col md:flex-row gap-10 items-center">
-                <!-- Image latérale -->
+                <!-- Image latérale (L'ordre s'inverse sur mobile mais c'est bien) -->
                 <div class="md:w-1/3">
                     <img 
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Taylor_Swift_at_the_Golden_Globes_2024_%28Enhanced%2C_cropped%29_1.jpg/330px-Taylor_Swift_at_the_Golden_Globes_2024_%28Enhanced%2C_cropped%29_1.jpg" 
@@ -169,7 +169,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-secondary">Discographie (Sélection Complète)</h2>
                 
-                <!-- Grille d'Albums : 5 éléments, la 5ème passe à la ligne sur desktop -->
+                <!-- Grille d'Albums : (grid-cols-1 par défaut, sm:grid-cols-2, lg:grid-cols-3, xl:grid-cols-5) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
                     
                     <!-- Album 1: Midnights -->
@@ -348,6 +348,7 @@
             <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-primary">Actualités & Tournée</h2>
             
             <!-- Grille d'Actualités (4 éléments) -->
+            <!-- La grille est désormais définie pour 1 colonne sur mobile (sm:grid-cols-2 et lg:grid-cols-4) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Carte d'Actualité 1 -->
                 <div class="bg-slate-900 p-6 rounded-2xl shadow-xl border border-[var(--color-primary)]/20">
